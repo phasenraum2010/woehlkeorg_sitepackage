@@ -1,0 +1,8 @@
+config {
+	baseURL = http://woehlke.org/
+	absRefPrefix = http://woehlke.org/
+	compressCss = 1
+	compressJs = 1
+	concatenateCss = 1
+	concatenateJs = 1
+}

@@ -1,0 +1,40 @@
+
+#-------------------------------------------------------------------------------
+#	Plugin Constants
+#-------------------------------------------------------------------------------
+
+# {$plugin.tx_woehlkeorg_sitepackage.settings.host}
+
+plugin {
+	tx_woehlkeorg_sitepackage {
+		url {
+			local = http://localhost/t3petclinic/
+			dev = http://t3petclinic.woehlke.org/
+			live = http://t3petclinic.woehlke.org/
+		}
+		view {
+			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to template root (FE)
+			templateRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Templates/
+			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to templates for Content Elements (FE)
+			content. templateRootPath= EXT:woehlkeorg_sitepackage/Resources/Private/Templates/Content/
+			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to template partials (FE)
+			partialRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Partials/
+			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to template layouts (FE)
+			layoutRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Layouts/
+		}
+		settings {
+			# cat=plugin.tx_woehlkeorg_sitepackage/linke; type=string; label=Host (URL of local,test,live)
+			host = {$plugin.tx_woehlkeorg_sitepackage.url.test}
+		}
+	}
+}
+
+styles.content.textmedia.linkWrap.lightboxEnabled = 1
+bootstrap.config.compress = 0
+bootstrap.config.realurl = 1
+bootstrap.config.baseURL = http://woehlke.org/
+bootstrap.config.lastModifiedContentElement = 1
+plugin.tx_indexedsearch.settings.targetPid = 3
+plugin.tx_indexedsearch.settings.rootPidList = 1
+
+
