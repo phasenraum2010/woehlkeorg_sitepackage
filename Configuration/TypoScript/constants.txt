@@ -8,9 +8,9 @@
 plugin {
 	tx_woehlkeorg_sitepackage {
 		url {
-			local = http://localhost/t3petclinic/
-			dev = http://t3petclinic.woehlke.org/
-			live = http://t3petclinic.woehlke.org/
+			local = https://localhost/woehlkeorg/
+			dev = https://woehlke.org/
+			live = https://woehlke.org/
 		}
 		view {
 			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to template root (FE)
@@ -32,9 +32,41 @@ plugin {
 styles.content.textmedia.linkWrap.lightboxEnabled = 1
 bootstrap.config.compress = 0
 bootstrap.config.realurl = 1
-bootstrap.config.baseURL = http://woehlke.org/
+bootstrap.config.baseURL = https://woehlke.org/
 bootstrap.config.lastModifiedContentElement = 1
 plugin.tx_indexedsearch.settings.targetPid = 3
 plugin.tx_indexedsearch.settings.rootPidList = 1
 
-
+styles.content.loginform.pid = 5
+styles.content.loginform.recursive = 1
+styles.content.loginform.showForgotPasswordLink = 1
+styles.content.loginform.showPermaLogin = 1
+styles.content.loginform.emailFrom = thomas@woehlke.org
+styles.content.loginform.emailFromName = Thomas Wöhlke
+styles.content.loginform.replyToEmail = thomas@woehlke.org
+bootstrap.config.rootline = 0
+plugin.tx_news.settings.sitemap.startingpoint = 6
+plugin.tx_news.settings.sitemap.detailPid = 7
+plugin.tx_news.settings.sitemap.recursive = 10
+plugin.tx_news.settings.dated_news.tooltipPreStyle = qtip-shadow
+plugin.metaseo.metaTags.description = Thomas Wöhlke private Homepage
+plugin.metaseo.metaTags.copyright = (c) %YEAR% Thomas Wöhlke
+plugin.metaseo.metaTags.email = thomas.woehlke@gmail.com
+plugin.metaseo.metaTags.author = Thomas Wöhlke
+plugin.metaseo.metaTags.publisher = Thomas Wöhlke
+plugin.metaseo.metaTags.geoPositionLatitude = 52.5279141
+plugin.metaseo.metaTags.geoPositionLongitude = 13.3306969
+plugin.metaseo.metaTags.geoRegion = DE-BE
+plugin.metaseo.metaTags.geoPlacename = Berlin
+plugin.metaseo.metaTags.robotsOdp = 0
+plugin.metaseo.services.enableIfHeaderIsDisabled = 1
+plugin.metaseo.services.googleAnalytics = UA-17174370-1
+plugin.metaseo.services.googleAnalytics.anonymizeIp = 1
+plugin.metaseo.metaTags.msnVerification = 52F1EDC0244BCDCF5C95E402E9E3E49B
+plugin.metaseo.metaTags.yahooVerification = 52F1EDC0244BCDCF5C95E402E9E3E49B
+plugin.metaseo.userAgent.ieCompatibilityMode = edge
+plugin.metaseo.social.googleplus.profilePageId = https://plus.google.com/+ThomasWöhlke/
+plugin.metaseo.pageTitle.sitetitlePosition = 1
+plugin.metaseo.sitemap.index.allowNoStaticCachable = 1
+plugin.metaseo.sitemap.index.allowNoCache = 1
+plugin.metaseo.sitemap.changeFrequency = 3

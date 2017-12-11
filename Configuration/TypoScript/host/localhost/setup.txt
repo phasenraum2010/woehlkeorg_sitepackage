@@ -1,0 +1,8 @@
+config {
+	baseURL = https://localhost/woehlkeorg/
+	absRefPrefix = https://localhost/woehlkeorg/
+	compressCss = 0
+	compressJs = 0
+	concatenateCss = 0
+	concatenateJs = 0
+}

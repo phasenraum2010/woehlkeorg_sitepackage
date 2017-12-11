@@ -1,6 +1,6 @@
 config {
-	baseURL = http://woehlke.org/
-	absRefPrefix = http://woehlke.org/
+	baseURL = https://woehlke.org/
+	absRefPrefix = https://woehlke.org/
 	compressCss = 0
 	compressJs = 0
 	concatenateCss = 0
