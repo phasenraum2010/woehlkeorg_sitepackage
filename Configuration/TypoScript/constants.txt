@@ -14,13 +14,13 @@ plugin {
 		}
 		view {
 			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to template root (FE)
-			templateRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Templates/
+			templateRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/site/Templates/
 			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to templates for Content Elements (FE)
-			content. templateRootPath= EXT:woehlkeorg_sitepackage/Resources/Private/Templates/Content/
+			content. templateRootPath= EXT:woehlkeorg_sitepackage/Resources/site/Private/Templates/Content/
 			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to template partials (FE)
-			partialRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Partials/
+			partialRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/site/Partials/
 			# cat=plugin.tx_woehlkeorg_sitepackage/file; type=string; label=Path to template layouts (FE)
-			layoutRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Layouts/
+			layoutRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/site/Layouts/
 		}
 		settings {
 			# cat=plugin.tx_woehlkeorg_sitepackage/linke; type=string; label=Host (URL of local,test,live)
@@ -70,3 +70,39 @@ plugin.metaseo.pageTitle.sitetitlePosition = 1
 plugin.metaseo.sitemap.index.allowNoStaticCachable = 1
 plugin.metaseo.sitemap.index.allowNoCache = 1
 plugin.metaseo.sitemap.changeFrequency = 3
+
+styles.content.loginform.redirectMode = groupLogin,userLogin, login,  loginError, logout
+styles.content.loginform.redirectFirstMethod = 1
+styles.content.loginform.redirectPageLogin = 115
+styles.content.loginform.redirectPageLoginError = 114
+styles.content.loginform.redirectPageLogout = 114
+styles.content.loginform.newPasswordMinLength = 8
+bootstrap.config.compress = 1
+plugin.tx_staticinfotables_pi1.countryCode = DEU
+plugin.tx_staticinfotables_pi1.countryZoneCode = BE
+plugin.tx_staticinfotables_pi1.languageCode = DE
+
+
+plugin.tx_t3extblog.persistence.storagePid = 575
+plugin.tx_t3extblog.settings.blogName = Thomas Wöhlke Blog
+plugin.tx_t3extblog.settings.emailFrom = typo3@woehlke.org
+plugin.tx_t3extblog.settings.blogsystem.pid = 574
+plugin.tx_t3extblog.settings.emailTo = typo3@woehlke.org
+plugin.tx_t3extblog.settings.subscriptionManager.pid = 602
+plugin.tx_t3extblog.settings.twitterName = port80guru
+
+styles.content.loginform.emailFrom = typo3@woehlke.org
+styles.content.loginform.replyToEmail = typo3@woehlke.org
+styles.content.loginform.redirectMode = groupLogin,userLogin,login,loginError,logout
+bootstrap.ext.form.modal = 1
+bootstrap.config.rootline = 1
+bootstrap.config.compress = 0
+bootstrap.config.fontawesomeversion = 5
+plugin.tx_maps2.view.includeJQuery = 0
+plugin.tx_maps2.persistence.storagePid = 606
+plugin.tx_maps2.view.googleMapsJavaScriptApiKey = AIzaSyC9Z1he_BC-79lg5szQJqOnZ876e6-SqYY
+plugin.metaseo.metaTags.canonicalUrl.fallbackProtocol = https
+plugin.metaseo.metaTags.keywords = Berlin, Bochum, Aschaffenburg, Java, CMS, TYPO3, Blog, Kino, Musik, System-Theorie, System-Engineering, Software-Entwicklung, IT, Web, e-Business, Mathematik, Inklusion, Klimawandel, Digitalisierung, Transformation, ADHS, Asperger, PTBS, Soziologie, Domain Driven Design, SCRUM, Elsevier
+plugin.metaseo.metaTags.revisit = 7
+plugin.metaseo.metaTags.robotsOdp = 1
+plugin.metaseo.metaTags.googleVerification = uSsWj9B9sArLE3qQu0g0YoDDvnPz74db_tPfOj4XEOg

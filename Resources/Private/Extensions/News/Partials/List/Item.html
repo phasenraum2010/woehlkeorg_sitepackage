@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<li class="media mb-2 pb-2{f:if(condition: iterator.isEven, then: ' even', else: ' odd')}" style="border-bottom: 1px solid #ddd;">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+	<f:if condition="{newsItem.mediaPreviews}">
+		<!-- media preview element -->
+		<f:then>
+			<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+				<f:if condition="{mediaElement.originalResource.type} == 2">
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+						<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}c" class="mr-3"/>
+					</n:link>
+				</f:if>
+				<f:if condition="{mediaElement.originalResource.type} == 4">
+					<div class="mediaelement mr-3">
+						<div class="mediaelement-video embed-responsive embed-responsive-16by9">
+							<f:media class="embed-responsive-item" file="{mediaElement}" width="{settings.detail.media.video.width}" height="{settings.detail.media.video.height}" />
+						</div>
+					</div>
+				</f:if>
+				<f:if condition="{mediaElement.originalResource.type} == 5">
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+					<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}" class="mr-3"/>
+					</n:link>
+				</f:if>
+			</f:alias>
+		</f:then>
+		<f:else>
+			<f:if condition="{settings.displayDummyIfNoMedia}">
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+					<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}" class="mr-3"/>
+				</n:link>
+			</f:if>
+		</f:else>
+	</f:if>
+	<div class="media-body">
+		<!-- header -->
+		<h5 class="mt-0 mb-1">
+			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+				<span itemprop="headline">{newsItem.title}</span>
+			</n:link>
+		</h5>
+		<!-- teaser -->
+<div class="d-none d-sm-block">
+		<n:removeMediaTags>
+		<f:if condition="{newsItem.teaser}">
+			<f:then>
+				{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+			</f:then>
+			<f:else>
+				{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+			</f:else>
+		</f:if>
+		</n:removeMediaTags>
+</div>
+		<n:link newsItem="{newsItem}" settings="{settings}" class="more float-right btn btn-light d-none d-sm-block" title="{newsItem.title}" style="margin-top: -.8rem;">
+			<f:translate key="more-link"/>
+		</n:link>
+	</div>
+</li>
+</html>

@@ -6,6 +6,7 @@
 		font-family: 'Titillium Web', sans-serif !important;
 		font-weight: 100 !important;
 		font-size: 18px;
+		background: #e9ebe9;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -23,9 +24,12 @@
 		border-radius: 4px;
 	}
 
-	.page-title h1.display-1 {
+	.page-title h1,
+	.page-title h2 {
 		color: rgb(85, 85, 85);
 		background-color: rgba(255,255,255,0.7);
+		padding-left: 15px;
+		padding-right: 15px;
 		border-radius: 4px;
 	}
 

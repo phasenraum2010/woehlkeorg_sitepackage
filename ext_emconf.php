@@ -35,10 +35,10 @@ $EM_CONF[$_EXTKEY] = array(
             /* TER-Extensions: */
             'gridelements' => '8.0.0-8.9.99',
             //'realurl' => '2.2.1-2.2.99',
-            'versatile_crawler' => '1.0.0-1.0.99',
+            //'versatile_crawler' => '1.0.0-1.0.99',
             'dyncss' => '0.8.2-0.8.99',
             'dyncss_scss' => '1.1.1-1.1.99',
-            't3sbootstrap' => '4.0.4-4.0.99'
+            't3sbootstrap' => '4.1.0-4.9.99'
         ),
         'conflicts' => array(
             'fluidpages' => '0.0.0-99.99.99',

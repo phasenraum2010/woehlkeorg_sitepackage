@@ -1,6 +1,10 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:woehlkeorg_sitepackage/Configuration/TypoScript/all/config.ts">
 
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:woehlkeorg_sitepackage/Configuration/TypoScript/all/fsc.ts">
+
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:woehlkeorg_sitepackage/Configuration/TypoScript/all/plugin.ts">
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:woehlkeorg_sitepackage/Configuration/TypoScript/all/page.ts">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:woehlkeorg_sitepackage/Configuration/TypoScript/all/module.ts">
 
