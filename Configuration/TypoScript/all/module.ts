@@ -1,4 +1,7 @@
-# Module configuration
+#-------------------------------------------------------------------------------
+#    Module configuration
+#-------------------------------------------------------------------------------
+
 module {
 	tx_t3extblog < plugin.tx_t3extblog
 	tx_vidi {
@@ -7,50 +10,54 @@ module {
 		view {
 			templateRootPaths {
 				10 = {$module.tx_vidi.view.templateRootPath}
-				20 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/vidi/Templates/
+				20 = EXT:woehlkeorg_sitepackage/Resources/ext/vidi/Templates/
 			}
 			partialRootPaths {
 				10 = {$module.tx_vidi.view.partialRootPath}
-				20 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/vidi/Partials/
+				20 = EXT:woehlkeorg_sitepackage/Resources/ext/vidi/Partials/
 			}
 			layoutRootPaths {
 				10 = {$module.tx_vidi.view.layoutRootPath}
-				20 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/vidi/Layouts/
+				20 = EXT:woehlkeorg_sitepackage/Resources/ext/vidi/Layouts/
 			}
 		}
 	}
+	tx_sysnote < plugin.tx_sysnote
 	tx_sysnote {
+		settings < plugin.tx_sysnote.settings
+		view < plugin.tx_sysnote.view
 		view {
 			layoutRootPath {
 				0 = {$module.tx_sysnote.view.layoutRootPath}
-				1 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/sys_note/Layouts/
+				1 = EXT:woehlkeorg_sitepackage/Resources/ext/sys_note/Layouts/
 			}
 			templateRootPath {
 				0 = {$module.tx_sysnote.view.templateRootPath}
-				1 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/sys_note/Templates/
+				1 = EXT:woehlkeorg_sitepackage/Resources/ext/sys_note/Templates/
 			}
 			partialRootPath {
 				0 = {$module.tx_sysnote.view.partialRootPath}
-				1 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/sys_note/Partials/
+				1 = EXT:woehlkeorg_sitepackage/Resources/ext/sys_note/Partials/
 			}
 		}
 	}
+	tx_media < plugin.tx_media
 	tx_media {
+		settings < plugin.tx_media.settings
+		view < plugin.tx_media.view
 		view {
 			templateRootPath {
 				10 = {$module.tx_media.view.templateRootPath}
-				20 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/media/Templates/
+				20 = EXT:woehlkeorg_sitepackage/Resources/ext/media/Templates/
 			}
 			partialRootPath {
 				10 = {$module.tx_media.view.partialRootPath}
-				20 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/media/Partials/
+				20 = EXT:woehlkeorg_sitepackage/Resources/ext/media/Partials/
 			}
 			layoutRootPath {
 				10 = {$module.tx_media.view.layoutRootPath}
-				20 = EXT:woehlkeorg_sitepackage/Resources/Private/Extensions/media/Layouts/
+				20 = EXT:woehlkeorg_sitepackage/Resources/ext/media/Layouts/
 			}
 		}
 	}
 }
-
-

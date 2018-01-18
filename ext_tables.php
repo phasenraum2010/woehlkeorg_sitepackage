@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: tw
@@ -6,8 +7,14 @@
  * Time: 10:26
 */
 
-TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
+defined('TYPO3_MODE') || die('Access denied.');
 
-	# Default pid for "fe_groups" in Vidi:
-	tx_vidi.dataType.fe_groups.storagePid = 5
-');
+call_user_func(
+    function($extKey) {
+
+        TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
+	        # Default pid for "fe_groups" in Vidi:
+	        tx_vidi.dataType.fe_groups.storagePid = 5
+        ');
+    }
+);
