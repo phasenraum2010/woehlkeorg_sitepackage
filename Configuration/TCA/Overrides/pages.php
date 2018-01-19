@@ -20,20 +20,32 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'woehlkeorg_sitepackage',
+            'Configuration/TypoScript/ext/fs_media_gallery',
+            'woehlke.org ext fs_media_gallery'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            'woehlkeorg_sitepackage',
+            'Configuration/TypoScript/ext/news',
+            'woehlke.org ext news'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            'woehlkeorg_sitepackage',
             'Configuration/TypoScript/host/localhost',
-            'woehlke.org Sitepackage Localhost'
+            'woehlke.org on Localhost'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'woehlkeorg_sitepackage',
             'Configuration/TypoScript/host/dev',
-            'woehlke.org Sitepackage Dev'
+            'woehlke.org on Dev'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'woehlkeorg_sitepackage',
             'Configuration/TypoScript/host/live',
-            'woehlke.org Sitepackage Live'
+            'woehlke.org on Live'
         );
 
     }, 'woehlkeorg_sitepackage'

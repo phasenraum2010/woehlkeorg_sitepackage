@@ -1,7 +1,7 @@
 page {
 	includeCSS {
-		cssFileGoogleFontTitilliumWeb = https://fonts.googleapis.com/css?family=Titillium+Web
-		cssFileGoogleFontJosefinSansOpenSansRaleway = https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway
+		#cssFileGoogleFontTitilliumWebOpenSans = https://fonts.googleapis.com/css?family=Titillium+Web|Open+Sans
+		cssFileGoogleFontJosefinSansRaleway = https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway
 		cssFileMyOwn = EXT:woehlkeorg_sitepackage/Resources/Public/css/my.css
 	}
 	includeJSFooter {

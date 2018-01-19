@@ -1,0 +1,34 @@
+plugin.tx_fsmediagallery {
+	view {
+		templateRootPaths {
+			100 = {$plugin.tx_fsmediagallery.view.templateRootPath}
+			110 = EXT:fs_media_gallery/Resources/Private/Themes/Bootstrap3/Templates/
+			120 = EXT:woehlkeorg_sitepackage/Resources/Private/ext/fs_media_gallery/Templates/
+		}
+		partialRootPaths {
+			100 = {$plugin.tx_fsmediagallery.view.partialRootPath}
+			110 = EXT:fs_media_gallery/Resources/Private/Themes/Bootstrap3/Partials/
+			110 = EXT:woehlkeorg_sitepackage/Resources/Private/ext/fs_media_gallery/Partials/
+		}
+		layoutRootPaths {
+			100 = {$plugin.tx_fsmediagallery.view.layoutRootPath}
+			110 = EXT:fs_media_gallery/Resources/Private/Themes/Bootstrap3/Layouts/
+		}
+		widget {
+			MiniFranske\FsMediaGallery\ViewHelpers\Widget\PaginateViewHelper {
+				templateRootPath = EXT:fs_media_gallery/Resources/Private/Themes/Bootstrap3/Templates/
+			}
+		}
+	}
+	settings {
+		list {
+			dummyImage = EXT:fs_media_gallery/Resources/Public/Images/Blank.png
+		}
+		album {
+			lightbox {
+				styleClass =
+			}
+		}
+	}
+}
+page.includeCSS.tx-fs-media-gallery = EXT:woehlkeorg_sitepackage/Resources/Public/css/MediaAlbum_Bootstrap4.css
