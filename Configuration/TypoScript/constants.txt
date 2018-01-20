@@ -81,14 +81,28 @@ plugin {
 		}
 	}
 	tx_news {
+		rss.channel {
+			title = Thomas Wöhlke: woehlke.org
+			description = Alle Neuen Artikel
+			link = htpps://woehlke.org
+			language = de-de
+			copyright = TYPO3 News
+			category =
+			generator = TYPO3 EXT:news
+		}
+		opengraph {
+			site_name = Thomas Wöhlke: woehlke.org
+			twitter {
+				card = summary
+				site = htpps://woehlke.org
+				creator = @port80guru
+			}
+		}
 		settings {
 			sitemap {
 				startingpoint = 6
 				detailPid = 7
 				recursive = 10
-			}
-			dated_news {
-				tooltipPreStyle = qtip-shadow
 			}
 		}
 	}
@@ -145,23 +159,6 @@ plugin {
 		countryZoneCode = BE
 		languageCode = DE
 	}
-	tx_t3extblog {
-		persistence {
-			storagePid = 575
-		}
-		settings {
-			blogName = Thomas Wöhlke Blog
-			emailFrom = typo3@woehlke.org
-			blogsystem {
-				pid = 574
-			}
-			emailTo = typo3@woehlke.org
-			subscriptionManager {
-				pid = 602
-			}
-			twitterName = port80guru
-		}
-	}
 	tx_maps2 {
 		persistence {
 			storagePid = 606
@@ -189,5 +186,7 @@ styles.content.loginform.recursive = 1
 styles.content.loginform.showForgotPasswordLink = 1
 styles.content.textmedia.linkWrap.lightboxEnabled = 1
 plugin.metaseo.services.googleAnalytics.anonymizeIp = 1
+
+
 
 
