@@ -1,12 +1,19 @@
 page {
 	includeCSS {
 		#cssFileGoogleFontTitilliumWebOpenSans = https://fonts.googleapis.com/css?family=Titillium+Web|Open+Sans
-		cssFileGoogleFontJosefinSansRaleway = https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway
+		cssFileGoogleFontJosefinSans = https://fonts.googleapis.com/css?family=Josefin+Sans
+		cssFileGoogleFontRaleway = https://fonts.googleapis.com/css?family=Raleway
 		cssFileMyOwn = EXT:woehlkeorg_sitepackage/Resources/Public/css/my.css
 	}
-	includeJSFooter {
+	includeJSFooterlibs {
 		jsTwitterWidget = https://platform.twitter.com/widgets.js
-		jsMyJquery = EXT:indexed_search_autocomplete/Resources/Public/JavaScript/Jquery-3.2.1.min.js
+		jsTwitterWidget.external = 1
+		#jquery = https://code.jquery.com/jquery-2.2.4.min.js
+		#jquery.external = 1
+	}
+	includeJSFooter {
+		jquery = EXT:indexed_search_autocomplete/Resources/Public/JavaScript/Jquery-3.2.1.min.js
+		#jsMyJquery = EXT:indexed_search_autocomplete/Resources/Public/JavaScript/Jquery-3.2.1.min.js
 		jsFileMyOwn = EXT:woehlkeorg_sitepackage/Resources/Public/js/my.js
 	}
 	10 {
@@ -68,6 +75,7 @@ page {
 		index_enable = 1
 		# Wenn gesetzt, werden externe Medien, auf die auf Seiten verlinkt wird, ebenfalls indiziert.
 		index_externals = 1
+		index_metatags = 1
 	}
 }
 

@@ -3,9 +3,7 @@
 #-------------------------------------------------------------------------------
 
 plugin.tx_news {
-
 	settings {
-
 		list {
 			# media configuration
 			media {
@@ -41,4 +39,3 @@ plugin.tx_news {
 		}
 	}
 }
-

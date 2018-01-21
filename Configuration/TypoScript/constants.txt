@@ -9,7 +9,6 @@ bootstrap {
 		baseURL = https://woehlke.org/
 		lastModifiedContentElement = 1
 		rootline = 1
-		compress = 0
 		fontawesomeversion = 5
 	}
 	ext {
@@ -18,6 +17,7 @@ bootstrap {
 		}
 	}
 }
+
 
 #-------------------------------------------------------------------------------
 #	styles content Constants
@@ -34,7 +34,9 @@ styles {
 			pid = 5
 			recursive = 1
 			showForgotPasswordLink = 1
+			showLogoutFormAfterLogin = 1
 			showPermaLogin = 1
+			dateFormat = d.m.Y H:i
 			emailFrom = typo3@woehlke.org
 			emailFromName = Thomas Wöhlke
 			replyToEmail = typo3@woehlke.org
@@ -72,6 +74,8 @@ plugin {
 		settings {
 			# cat=plugin.tx_woehlkeorg_sitepackage/linke; type=string; label=Host (URL of local,test,live)
 			host = {$plugin.tx_woehlkeorg_sitepackage.url.test}
+			# cat=plugin.tx_woehlkeorg_sitepackage/jquery; type=string; label=jQuery Source (URL or File)
+			jQuerySource = {$plugin.tx_woehlkeorg_sitepackage.jquery.source}
 		}
 	}
 	tx_indexedsearch {
@@ -100,7 +104,10 @@ plugin {
 		}
 		settings {
 			sitemap {
-				startingpoint = 6
+				#startingpoint = 6
+				#detailPid = 7
+				#recursive = 10
+				startingpoint = 4
 				detailPid = 7
 				recursive = 10
 			}
@@ -132,6 +139,11 @@ plugin {
 			revisit = 7
 
 		}
+		services {
+			googleAnalytics {
+				anonymizeIp = 1
+			}
+		}
 		userAgent {
 			ieCompatibilityMode = edge
 		}
@@ -154,10 +166,31 @@ plugin {
 			googleVerification = uSsWj9B9sArLE3qQu0g0YoDDvnPz74db_tPfOj4XEOg
 		}
 	}
+	tx_calendarize {
+		settings {
+			feed {
+				title = Thomas Wöhlke
+				description = feed by Thomas Wöhlke on woehlke.org
+				language = de
+			}
+		}
+	}
 	tx_staticinfotables_pi1 {
 		countryCode = DEU
 		countryZoneCode = BE
 		languageCode = DE
+	}
+	tx_bmimagegallery {
+		persistence {
+			storagePid = 695
+		}
+	}
+	tx_fsmediagallery {
+		persistence {
+			storagePid = 695
+			recursive = 250
+			targetPid = 6
+		}
 	}
 	tx_maps2 {
 		persistence {
@@ -171,21 +204,7 @@ plugin {
 }
 
 
-plugin.tx_indexedsearch.settings.targetPid = 3
-plugin.tx_indexedsearch.settings.rootPidList = 1
-plugin.tx_news.settings.sitemap.startingpoint = 4
-plugin.tx_news.settings.sitemap.detailPid = 7
-plugin.tx_news.settings.sitemap.recursive = 10
-bootstrap.config.realurl = 1
-bootstrap.config.baseURL = https://woehlke.org/
-bootstrap.config.lastModifiedContentElement = 1
-bootstrap.config.fontawesomeversion = 5
-bootstrap.ext.form.modal = 1
-styles.content.loginform.pid = 5
-styles.content.loginform.recursive = 1
-styles.content.loginform.showForgotPasswordLink = 1
-styles.content.textmedia.linkWrap.lightboxEnabled = 1
-plugin.metaseo.services.googleAnalytics.anonymizeIp = 1
+
 
 
 
