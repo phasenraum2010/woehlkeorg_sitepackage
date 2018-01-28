@@ -3,14 +3,11 @@ page {
 		cssFileGoogleFontJosefinSans = https://fonts.googleapis.com/css?family=Josefin+Sans
 		cssFileGoogleFontRaleway = https://fonts.googleapis.com/css?family=Raleway
 		bootstrapFour = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
-		#bootstrapFour.forceOnTop = 1
 		cssFileMyOwn = EXT:woehlkeorg_sitepackage/Resources/Public/css/my.css
 	}
 	includeJSFooterlibs {
 		jsTwitterWidget = https://platform.twitter.com/widgets.js
 		jsTwitterWidget.external = 1
-		#jquery = https://code.jquery.com/jquery-2.2.4.min.js
-		#jquery.external = 1
 		t3sbjquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
 		t3sbjquery.forceOnTop = 1
 		t3sbpopper = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js

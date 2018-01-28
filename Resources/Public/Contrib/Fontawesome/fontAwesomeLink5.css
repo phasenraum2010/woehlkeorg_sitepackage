@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 900;
+  src: url("5.0.6/on-server/webfonts/fa-solid-900.eot");
+  src: url("5.0.6/on-server/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("5.0.6/on-server/webfonts/fa-solid-900.woff2") format("woff2"), url("5.0.6/on-server/webfonts/fa-solid-900.woff") format("woff"), url("5.0.6/on-server/webfonts/fa-solid-900.ttf") format("truetype"), url("5.0.6/on-server/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+.internal-link::before {
+	font-family: 'FontAwesome';
+	content: "\f0c1";
+	margin: 0 .2rem;
+}
+.external-link::before {
+	font-family: 'FontAwesome';
+	content: "\f35d";
+	margin: 0 .2rem;
+	margin-right: .4rem;
+}
+.download-link::before {
+	font-family: 'FontAwesome';
+	content: "\f019";
+	margin: 0 .2rem;
+	margin-right: .4rem;
+}
+.email-link::before {
+	font-family: 'FontAwesome';
+	content: "\f0e0";
+	margin: 0 .2rem;
+	margin-right: .4rem;
+}
