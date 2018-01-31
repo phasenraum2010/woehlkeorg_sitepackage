@@ -32,29 +32,39 @@ page {
 		cssFileMyOwn = EXT:woehlkeorg_sitepackage/Resources/Public/Styles/my.css
 	}
 	includeJSLibs {
-		fontawesome = https://use.fontawesome.com/releases/v5.0.6/js/all.js
-		fontawesome.external = 1
-		fontawesomeShims =  https://use.fontawesome.com/releases/v5.0.6/js/v4-shims.js
-		fontawesomeShims.external = 1
+		#fontawesome = https://use.fontawesome.com/releases/v5.0.6/js/all.js
+		#fontawesome.external = 1
+		#fontawesomeShims =  https://use.fontawesome.com/releases/v5.0.6/js/v4-shims.js
+		#fontawesomeShims.external = 1
+		fontawesome = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Fontawesome/5.0.6/on-server/js/fontawesome-all.js
+		fontawesomeShims = EXT:typo3conf/ext/woehlkeorg_sitepackage/Resources/Public/Contrib/Fontawesome/5.0.6/on-server/js/fa-v4-shims.js
 		jsTwitterWidget = https://platform.twitter.com/widgets.js
 		jsTwitterWidget.external = 1
 	}
 	includeJSFooterlibs {
-		jquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
-		jquery.external = 1
-		t3sbjquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
-		t3sbjquery.forceOnTop = 1
-		t3sbpopper = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
-		t3sbpopper.external = 1
-		t3sbootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
-		t3sbootstrap.external = 1
+		jquery >
+		t3sbjquery >
+		t3sbpopper >
+		t3sbootstrap >
+		#jquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
+		#jquery.external = 1
+		#t3sbjquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
+		#t3sbjquery.forceOnTop = 1
+		#t3sbpopper = https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+		#t3sbpopper.external = 1
+		#t3sbootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
+		#t3sbootstrap.external = 1
 	}
 	includeJSFooter {
-		t3sbjquery = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Jquery/jquery-3.2.1.slim.min.js
-		jquery = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Jquery/jquery-3.2.1.slim.min.js
-		t3sbpopper = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Popper/1.12.9/umd/popper.min.js
-		t3sbootstrap = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Bootstrap/4.0.0/dist/js/bootstrap.min.js
-		jsFileMyOwn = EXT:woehlkeorg_sitepackage/Resources/Public/JavaScripts/my.js
+		jquery >
+		t3sbjquery >
+		t3sbpopper >
+		t3sbootstrap >
+		tw01Jquery = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Jquery/jquery-3.2.1.slim.min.js
+		tw01Jquery.forceOnTop = 1
+		tw02Ppopper = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Popper/1.12.9/umd/popper.min.js
+		tw03Bootstrap = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Bootstrap/4.0.0/dist/js/bootstrap.min.js
+		tw99JavaSrcipt = EXT:woehlkeorg_sitepackage/Resources/Public/JavaScripts/my.js
 	}
 	10 {
 		layoutRootPaths {

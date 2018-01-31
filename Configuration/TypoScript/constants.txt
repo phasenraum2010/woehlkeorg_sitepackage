@@ -201,8 +201,13 @@ plugin {
 			googleMapsJavaScriptApiKey = AIzaSyC9Z1he_BC-79lg5szQJqOnZ876e6-SqYY
 		}
 	}
+	tx_web2pdf {
+		settings {
+			pdfStyleSheet = print
+			pdfDestination = inline
+		}
+	}
 }
-
 
 
 

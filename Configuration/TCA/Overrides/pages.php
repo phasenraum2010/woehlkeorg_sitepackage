@@ -48,5 +48,12 @@ call_user_func(
             'woehlke.org on Live'
         );
 
+        unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['news']);
+
+        // Register the RealUrl Autoconfig Hook
+        if (! isset ($confArr ['enableRealURLAutoConfiguration']) || $confArr ['enableRealURLAutoConfiguration']) {
+            $GLOBALS ['TYPO3_CONF_VARS'] ['SC_OPTIONS'] ['ext/realurl/class.tx_realurl_autoconfgen.php'] ['extensionConfiguration'] ['oekumene_tiergarten'] = 'ThomasWoehlke\\WoehlkeOrg\\Hooks\\RealUrl->addRealURLConfig';
+        }
+
     }, 'woehlkeorg_sitepackage'
 );
