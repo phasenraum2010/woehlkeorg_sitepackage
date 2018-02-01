@@ -26,4 +26,10 @@ plugin.tx_news {
 		widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
 	}
 
+	settings {
+		link {
+			skipControllerAndAction = 1
+		}
+	}
+
 }
