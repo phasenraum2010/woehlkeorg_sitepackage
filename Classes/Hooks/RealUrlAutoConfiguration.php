@@ -7,6 +7,8 @@
  */
 namespace ThomasWoehlke\WoehlkeOrg\Hooks;
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 
 // https://docs.typo3.org/typo3cms/extensions/news/3.0.0/Main/Administration/Realurl/Index.html
 
