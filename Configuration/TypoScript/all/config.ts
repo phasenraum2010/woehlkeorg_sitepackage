@@ -8,3 +8,12 @@ config {
 	spamProtectEmailAddresses = 2
 	spamProtectEmailAddresses_atSubst = (at)
 }
+
+[globalVar = GP:tx_news_pi1|news > 0]
+	config.defaultGetVars {
+		tx_news_pi1 {
+			controller=News
+			action=detail
+		}
+	}
+[global]

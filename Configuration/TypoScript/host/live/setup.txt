@@ -1,3 +1,6 @@
+# ------------------
+#  Host: live
+# ------------------
 config {
 	baseURL = https://woehlke.org/
 	absRefPrefix = https://woehlke.org/

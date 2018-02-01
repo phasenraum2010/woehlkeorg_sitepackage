@@ -1,6 +1,6 @@
-# ------------------
-#  Host: Dev
-# ------------------
+# --------------
+#  Host: Test
+# --------------
 config {
 	baseURL = https://woehlke.org/
 	absRefPrefix = https://woehlke.org/

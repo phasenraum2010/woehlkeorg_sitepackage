@@ -2,7 +2,10 @@
 # FE-Plugin configuration for EXT:news
 # ==============================================
 plugin.tx_news {
-	mvc.callDefaultActionIfActionCantBeResolved = 1
+
+	mvc {
+		callDefaultActionIfActionCantBeResolved = 1
+	}
 
 	view {
 		templateRootPaths {
@@ -23,12 +26,66 @@ plugin.tx_news {
 			2 = EXT:woehlkeorg_sitepackage/Resources/Private/ext/news/Layouts/
 		}
 
-		widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
+		widget {
+			GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper {
+				templateRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Templates/
+			}
+		}
 	}
 
 	settings {
+		list {
+			# media configuration
+			media {
+				image {
+					maxWidth = 100
+					maxHeight = 100
+				}
+				dummyImage = typo3conf/ext/woehlkeorg_sitepackage/Resources/Public/img/port80guru-mask-td-thief-small-square.png
+			}
+		}
 		link {
 			skipControllerAndAction = 1
+			hrDate = 1
+			hrDate {
+				day = d
+				month = m
+				year = Y
+			}
+		}
+		facebookLocale = de_DE
+		googlePlusLocale = de
+		disqusLocale = de
+
+		# --------------
+		#  Detail
+		# --------------
+		detail {
+			showSocialShareButtons = 1
+			disqusShortname =
+		}
+	}
+
+	# Opengraph implementation
+	opengraph {
+		site_name = {$plugin.tx_news.opengraph.site_name}
+		type = article
+		admins = Thomas Wöhlke
+		email = thomas.woehlke@gmail.com
+		phone_number =
+		fax_number =
+		latitude = 52.5279109
+		longitude = 13.3306969
+		street-address = Emdener Str. 56
+		locality = Berlin
+		region = DE-BE
+		postal-code = 10551
+		country-name = Deutschland
+
+		twitter {
+			card = {$plugin.tx_news.opengraph.twitter.card}
+			site = {$plugin.tx_news.opengraph.twitter.site}
+			creator = {$plugin.tx_news.opengraph.twitter.creator}
 		}
 	}
 

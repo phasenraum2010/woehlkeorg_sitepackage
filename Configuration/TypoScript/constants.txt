@@ -59,6 +59,7 @@ plugin {
 		url {
 			local = https://localhost/woehlkeorg/
 			dev = https://woehlke.org/
+			test = https://woehlke.org/
 			live = https://woehlke.org/
 		}
 		view {

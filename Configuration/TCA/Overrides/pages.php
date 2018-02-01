@@ -32,8 +32,14 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'woehlkeorg_sitepackage',
-            'Configuration/TypoScript/host/localhost',
-            'woehlke.org on Localhost'
+            'Configuration/TypoScript/host/live',
+            'woehlke.org on Live'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            'woehlkeorg_sitepackage',
+            'Configuration/TypoScript/host/test',
+            'woehlke.org on Test'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
@@ -44,9 +50,11 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'woehlkeorg_sitepackage',
-            'Configuration/TypoScript/host/live',
-            'woehlke.org on Live'
+            'Configuration/TypoScript/host/localhost',
+            'woehlke.org on Localhost'
         );
+
+
 
     }, 'woehlkeorg_sitepackage'
 );

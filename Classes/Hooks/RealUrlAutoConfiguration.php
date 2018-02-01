@@ -58,7 +58,7 @@ class RealUrlAutoConfiguration {
                     array(
                         'GETvar' => 'no_cache',
                         'valueMap' => array(
-                            'de' => 1,
+                            'de' => 0,
                         ),
                         'noMatch' => 'bypass',
                     ),
@@ -80,6 +80,18 @@ class RealUrlAutoConfiguration {
                             'noMatch' => 'bypass'
                         ),
                         array(
+                            'GETvar' => 'tx_news_pi1[day]',
+                            'noMatch' => 'bypass',
+                        ),
+                        array(
+                            'GETvar' => 'tx_news_pi1[month]',
+                            'noMatch' => 'bypass',
+                        ),
+                        array(
+                            'GETvar' => 'tx_news_pi1[year]',
+                            'noMatch' => 'bypass',
+                        ),
+                        array(
                             'GETvar' => 'tx_news_pi1[news]',
                             'lookUpTable' => array(
                                 'table' => 'tx_news_domain_model_news',
@@ -97,8 +109,8 @@ class RealUrlAutoConfiguration {
                                 'transOrigPointerField' => 'l10n_parent',
                                 'autoUpdate' => 1,
                                 'expireDays' => 180,
-                            )
-                        )
+                            ),
+                        ),
                     ),
                     'newsCategoryConfiguration' => array(
                         array(
@@ -140,6 +152,28 @@ class RealUrlAutoConfiguration {
                 ),
                 'postVarSets' => array(
                     '_DEFAULT' => array(
+                        'post' => array(
+                            array(
+                                'GETvar' => 'tx_news_pi1[action]',
+                                'noMatch' => 'bypass'
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[controller]',
+                                'noMatch' => 'bypass'
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[day]',
+                                'noMatch' => 'bypass',
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[month]',
+                                'noMatch' => 'bypass',
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[year]',
+                                'noMatch' => 'bypass',
+                            ),
+                        ),
                         'controller' => array(
                             array(
                                 'GETvar' => 'tx_news_pi1[action]',
@@ -148,9 +182,20 @@ class RealUrlAutoConfiguration {
                             array(
                                 'GETvar' => 'tx_news_pi1[controller]',
                                 'noMatch' => 'bypass'
-                            )
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[day]',
+                                'noMatch' => 'bypass',
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[month]',
+                                'noMatch' => 'bypass',
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[year]',
+                                'noMatch' => 'bypass',
+                            ),
                         ),
-
                         'dateFilter' => array(
                             array(
                                 'GETvar' => 'tx_news_pi1[overwriteDemand][year]',
@@ -181,7 +226,7 @@ class RealUrlAutoConfiguration {
                 'fileName' =>
                     array (
                     'defaultToHTMLsuffixOnPrev' => 0,
-                    'acceptHTMLsuffix' => 1,
+                    'acceptHTMLsuffix' => 0,
                     'index' =>
                         array (
                             'sitemap.xml' =>

@@ -1,3 +1,6 @@
+# ------------------
+#  Host: localhost
+# ------------------
 config {
 	baseURL = https://localhost/woehlkeorg/
 	absRefPrefix = https://localhost/woehlkeorg/
