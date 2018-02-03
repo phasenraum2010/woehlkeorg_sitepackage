@@ -41,11 +41,16 @@ page {
 		jsTwitterWidget = https://platform.twitter.com/widgets.js
 		jsTwitterWidget.external = 1
 	}
+
+
 	includeJSFooterlibs {
 		jquery >
 		t3sbjquery >
 		t3sbpopper >
 		t3sbootstrap >
+		tx_weather2jQuery >
+		tx_weather2jQuery.external = 0
+
 		#jquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
 		#jquery.external = 1
 		#t3sbjquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
@@ -60,11 +65,11 @@ page {
 		t3sbjquery >
 		t3sbpopper >
 		t3sbootstrap >
-		tw01Jquery = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Jquery/jquery-3.2.1.slim.min.js
+		tw01Jquery = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Jquery/jquery-3.3.1.min.js
 		tw01Jquery.forceOnTop = 1
 		tw02Ppopper = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Popper/1.12.9/umd/popper.min.js
 		tw03Bootstrap = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Bootstrap/4.0.0/dist/js/bootstrap.min.js
-		tw99JavaSrcipt = EXT:woehlkeorg_sitepackage/Resources/Public/JavaScripts/my.js
+		tw99JavaSrcipt = EXT:woehlkeorg_sitepackage/Resources/Public/JavaScript/my.js
 	}
 	10 {
 		layoutRootPaths {
@@ -128,6 +133,7 @@ page {
 		index_metatags = 1
 	}
 }
+
 
 
 

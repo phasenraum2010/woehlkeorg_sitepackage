@@ -8,3 +8,9 @@
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:woehlkeorg_sitepackage/Configuration/TypoScript/all/plugin.ts">
 
+page.includeJSFooterlibs {
+	tx_weather2jQuery.external = 0
+	tx_weather2jQuery >
+
+}
+

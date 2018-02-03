@@ -11,24 +11,25 @@ plugin.tx_news {
 		templateRootPaths {
 			0 = EXT:news/Resources/Private/Templates/
 			1 = {$plugin.tx_news.view.templateRootPath}
-			2 = EXT:woehlkeorg_sitepackage/Resources/Private/ext/news/Templates/
+			2 = EXT:woehlkeorg_sitepackage/Resources/Private/extensions/news/Templates/
 		}
 
 		partialRootPaths {
 			0 = EXT:news/Resources/Private/Partials/
 			1 = {$plugin.tx_news.view.partialRootPath}
-			2 = EXT:woehlkeorg_sitepackage/Resources/Private/ext/news/Partials/
+			2 = EXT:woehlkeorg_sitepackage/Resources/Private/extensions/news/Partials/
 		}
 
 		layoutRootPaths {
 			0 = EXT:news/Resources/Private/Layouts/
 			1 = {$plugin.tx_news.view.layoutRootPath}
-			2 = EXT:woehlkeorg_sitepackage/Resources/Private/ext/news/Layouts/
+			2 = EXT:woehlkeorg_sitepackage/Resources/Private/extensions/news/Layouts/
 		}
 
 		widget {
 			GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper {
-				templateRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/Templates/
+				#woehlkeorg_sitepackage/Resources/Private/extensions/news/Templates/ViewHelpers/Widget/Paginate/Index.html
+				templateRootPath = EXT:woehlkeorg_sitepackage/Resources/Private/extensions/news/Templates/
 			}
 		}
 	}
@@ -52,6 +53,7 @@ plugin.tx_news {
 				month = m
 				year = Y
 			}
+			typesOpeningInNewWindow = 2
 		}
 		facebookLocale = de_DE
 		googlePlusLocale = de
@@ -63,6 +65,7 @@ plugin.tx_news {
 		detail {
 			showSocialShareButtons = 1
 			disqusShortname =
+			errorHandling = redirectToPage,6,404
 		}
 	}
 

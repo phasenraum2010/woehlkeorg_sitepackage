@@ -5,3 +5,4 @@ TCAdefaults.pages.tx_t3sbootstrap_container = container
 TCAdefaults.tt_content.tx_t3sbootstrap_container = container
 
 TCEMAIN.clearCacheCmd = all
+#TCEMAIN.clearCacheCmd = pages
