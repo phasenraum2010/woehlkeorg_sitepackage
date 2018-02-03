@@ -7,9 +7,6 @@
  */
 namespace ThomasWoehlke\WoehlkeOrg\Hooks;
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
-
 // https://docs.typo3.org/typo3cms/extensions/news/3.0.0/Main/Administration/Realurl/Index.html
 
 // https://docs.typo3.org/typo3cms/extensions/metaseo/AdministratorManual/Index.html#realurl-configuration
@@ -27,29 +24,33 @@ class RealUrlAutoConfiguration {
     public function addRealUrlConfig($params)
     {
 
-        // Check for proper unique key
-        //$postVar = (ExtensionManagementUtility::isLoaded('tt_news') ? 'tx_news' : 'news');
+        //$rootPageUid = 1;
+        $rssFeedPageType = 9818; // pageType of your RSS feed page
 
         return array_merge_recursive($params['config'], [
+            /*
                 'pagePath' => array(
                     'type' => 'user',
                     'userFunc' => 'EXT:realurl/class.tx_realurl_advanced.php:&tx_realurl_advanced->main',
                     'spaceCharacter' => '-',
                     'languageGetVar' => 'L',
                     'expireDays' => '3',
-                    'rootpage_id' => 1,
-                    'firstHitPathCache'=>1
+                    'rootpage_id' => $rootPageUid,
+                    'firstHitPathCache' => 1
                 ),
                 'init' => array(
                     'enableCHashCache' => TRUE,
-                    'enableCHashCache' => 1,
                     'respectSimulateStaticURLs' => 0,
-                    'enableUrlDecodeCache' => 1,
-                    'enableUrlEncodeCache' => 1
+                    'appendMissingSlash' => 'ifNotFile,redirect',
+                    'adminJumpToBackend' => TRUE,
+                    'enableUrlDecodeCache' => TRUE,
+                    'enableUrlEncodeCache' => TRUE,
+                    'emptyUrlReturnValue' => '/',
                 ),
+            */
                 'fileName' => array(
-                    'defaultToHTMLsuffixOnPrev' => 0,
-                    'acceptHTMLsuffix' => 0,
+                    //'defaultToHTMLsuffixOnPrev' => 0,
+                    //'acceptHTMLsuffix' => 0,
                     'index' =>
                         array (
                             'sitemap.xml' =>
@@ -73,6 +74,11 @@ class RealUrlAutoConfiguration {
                                             'type' => 841133,
                                         ),
                                 ),
+                            'feed.rss' => array(
+                                'keyValues' => array(
+                                    'type' => $rssFeedPageType,
+                                )
+                            ),
                             '_DEFAULT' =>
                                 array (
                                     'keyValues' =>
@@ -93,7 +99,7 @@ class RealUrlAutoConfiguration {
                     array(
                         'GETvar' => 'no_cache',
                         'valueMap' => array(
-                            'de' => 0,
+                            'nc' => 1,
                         ),
                         'noMatch' => 'bypass',
                     ),
@@ -115,18 +121,6 @@ class RealUrlAutoConfiguration {
                             'noMatch' => 'bypass'
                         ),
                         array(
-                            'GETvar' => 'tx_news_pi1[day]',
-                            'noMatch' => 'bypass',
-                        ),
-                        array(
-                            'GETvar' => 'tx_news_pi1[month]',
-                            'noMatch' => 'bypass',
-                        ),
-                        array(
-                            'GETvar' => 'tx_news_pi1[year]',
-                            'noMatch' => 'bypass',
-                        ),
-                        array(
                             'GETvar' => 'tx_news_pi1[news]',
                             'lookUpTable' => array(
                                 'table' => 'tx_news_domain_model_news',
@@ -142,10 +136,9 @@ class RealUrlAutoConfiguration {
                                 'languageExceptionUids' => '',
                                 'languageField' => 'sys_language_uid',
                                 'transOrigPointerField' => 'l10n_parent',
-                                'autoUpdate' => 1,
                                 'expireDays' => 180,
-                            ),
-                        ),
+                            )
+                        )
                     ),
                     'newsCategoryConfiguration' => array(
                         array(
@@ -179,36 +172,12 @@ class RealUrlAutoConfiguration {
                             )
                         )
                     ),
-                    '7' => 'newsDetailConfiguration',
-                    '9' => 'newsDetailConfiguration',
-                    '6' => 'newsTagConfiguration',
-                    '6' => 'newsCategoryConfiguration',
-
+                    '6' => 'newsDetailConfiguration',
+                    '827' => 'newsTagConfiguration',
+                    '828' => 'newsCategoryConfiguration',
                 ),
                 'postVarSets' => array(
                     '_DEFAULT' => array(
-                        'post' => array(
-                            array(
-                                'GETvar' => 'tx_news_pi1[action]',
-                                'noMatch' => 'bypass'
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[controller]',
-                                'noMatch' => 'bypass'
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[day]',
-                                'noMatch' => 'bypass',
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[month]',
-                                'noMatch' => 'bypass',
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[year]',
-                                'noMatch' => 'bypass',
-                            ),
-                        ),
                         'controller' => array(
                             array(
                                 'GETvar' => 'tx_news_pi1[action]',
@@ -217,19 +186,7 @@ class RealUrlAutoConfiguration {
                             array(
                                 'GETvar' => 'tx_news_pi1[controller]',
                                 'noMatch' => 'bypass'
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[day]',
-                                'noMatch' => 'bypass',
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[month]',
-                                'noMatch' => 'bypass',
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[year]',
-                                'noMatch' => 'bypass',
-                            ),
+                            )
                         ),
                         'dateFilter' => array(
                             array(

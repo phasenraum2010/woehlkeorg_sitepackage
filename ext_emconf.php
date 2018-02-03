@@ -71,11 +71,11 @@ $EM_CONF[$_EXTKEY] = array(
             / * wegen news * /
             / * 'dd_googlesitemap' => '2.0.5-2.99.99', * /
         )*/
-    ),/*
+    ),
     'autoload' => array(
         'psr-4' => array(
-            'ThomasWoehlke\\woehlke.org\\' => 'Classes',
+            'ThomasWoehlke\\WoehlkeOrg\\' => 'Classes',
         ),
-    ),*/
+    ),
 );
 
