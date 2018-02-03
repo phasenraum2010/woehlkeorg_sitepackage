@@ -6,3 +6,11 @@ TCAdefaults.tt_content.tx_t3sbootstrap_container = container
 
 TCEMAIN.clearCacheCmd = all
 #TCEMAIN.clearCacheCmd = pages
+
+
+tx_news.module.redirectToPageOnStart = 4
+tx_news.module.defaultPid.tx_news_domain_model_news = 4
+tx_news.module.defaultPid.tx_news_domain_model_link = 4
+tx_news.module.defaultPid.tx_news_domain_model_tag = 4
+
+tx_news.predefine.author  = 1

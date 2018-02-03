@@ -45,28 +45,41 @@ plugin.tx_news {
 				dummyImage = typo3conf/ext/woehlkeorg_sitepackage/Resources/Public/img/port80guru-mask-td-thief-small-square.png
 			}
 		}
+		# --------------
+		#  Detail
+		# --------------
+		detail {
+			showSocialShareButtons = 1
+			# disqusShortname = thomas_woehlke_org
+			# showPrevNext = 1
+
+			media {
+				# If using fluid_styled_content
+				lightbox {
+					enabled = {$styles.content.textmedia.linkWrap.lightboxEnabled}
+					class = {$styles.content.textmedia.linkWrap.lightboxCssClass}
+					width = {$styles.content.textmedia.linkWrap.width}
+					height = {$styles.content.textmedia.linkWrap.height}
+				}
+			}
+		}
 		link {
-			skipControllerAndAction = 1
 			hrDate = 1
 			hrDate {
 				day = d
 				month = m
 				year = Y
 			}
+			skipControllerAndAction = 1
 			typesOpeningInNewWindow = 2
 		}
 		facebookLocale = de_DE
 		googlePlusLocale = de
 		disqusLocale = de
 
-		# --------------
-		#  Detail
-		# --------------
-		detail {
-			showSocialShareButtons = 1
-			disqusShortname =
-			errorHandling = redirectToPage,6,404
-		}
+		includeSubCategories = 1
+
+		defaultDetailPid = 7
 	}
 
 	# Opengraph implementation

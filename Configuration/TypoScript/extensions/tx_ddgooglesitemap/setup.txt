@@ -1,0 +1,9 @@
+tx_ddgooglesitemap.tx_news {
+	hrDate = 1
+	hrDate {
+		day = d
+		month = m
+		year = Y
+	}
+}
+tx_ddgooglesitemap.tx_news.skipControllerAndAction = 1

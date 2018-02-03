@@ -22,5 +22,7 @@ tx_news.module.defaultPid.tx_news_domain_model_news = 4
 tx_news.module.defaultPid.tx_news_domain_model_link = 4
 tx_news.module.defaultPid.tx_news_domain_model_tag = 4
 
+tx_news.predefine.author  = 1
+
 # Default pid for "fe_groups" in Vidi:
 tx_vidi.dataType.fe_groups.storagePid = 5

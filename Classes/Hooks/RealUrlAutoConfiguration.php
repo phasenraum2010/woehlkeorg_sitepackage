@@ -137,6 +137,18 @@ class RealUrlAutoConfiguration {
                                 'languageField' => 'sys_language_uid',
                                 'transOrigPointerField' => 'l10n_parent',
                                 'expireDays' => 180,
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[day]',
+                                'noMatch' => 'bypass',
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[month]',
+                                'noMatch' => 'bypass',
+                            ),
+                            array(
+                                'GETvar' => 'tx_news_pi1[year]',
+                                'noMatch' => 'bypass',
                             )
                         )
                     ),
