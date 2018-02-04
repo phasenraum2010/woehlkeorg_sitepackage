@@ -110,7 +110,7 @@ plugin {
 				#recursive = 10
 				startingpoint = 4
 				detailPid = 7
-				recursive = 10
+				recursive = 4
 			}
 		}
 	}

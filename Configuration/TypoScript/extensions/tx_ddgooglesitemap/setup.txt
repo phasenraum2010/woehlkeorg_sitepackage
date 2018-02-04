@@ -1,4 +1,5 @@
 tx_ddgooglesitemap.tx_news {
+	skipControllerAndAction = 0
 	hrDate = 1
 	hrDate {
 		day = d
@@ -6,4 +7,13 @@ tx_ddgooglesitemap.tx_news {
 		year = Y
 	}
 }
-tx_ddgooglesitemap.tx_news.skipControllerAndAction = 1
+
+plugin.tx_ddgooglesitemap.tx_news {
+	skipControllerAndAction = 0
+	hrDate = 1
+	hrDate {
+		day = d
+		month = m
+		year = Y
+	}
+}

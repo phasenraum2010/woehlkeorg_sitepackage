@@ -7,7 +7,7 @@
  */
 namespace ThomasWoehlke\WoehlkeOrg\Hooks;
 
-// https://docs.typo3.org/typo3cms/extensions/news/3.0.0/Main/Administration/Realurl/Index.html
+// https://docs.typo3.org/typo3cms/extensions/news/
 
 // https://docs.typo3.org/typo3cms/extensions/metaseo/AdministratorManual/Index.html#realurl-configuration
 
@@ -24,11 +24,10 @@ class RealUrlAutoConfiguration {
     public function addRealUrlConfig($params)
     {
 
-        //$rootPageUid = 1;
+        $rootPageUid = 1;
         $rssFeedPageType = 9818; // pageType of your RSS feed page
 
         return array_merge_recursive($params['config'], [
-            /*
                 'pagePath' => array(
                     'type' => 'user',
                     'userFunc' => 'EXT:realurl/class.tx_realurl_advanced.php:&tx_realurl_advanced->main',
@@ -37,17 +36,16 @@ class RealUrlAutoConfiguration {
                     'expireDays' => '3',
                     'rootpage_id' => $rootPageUid,
                     'firstHitPathCache' => 1
-                ),
+                 ),
                 'init' => array(
                     'enableCHashCache' => TRUE,
                     'respectSimulateStaticURLs' => 0,
-                    'appendMissingSlash' => 'ifNotFile,redirect',
+                    #'appendMissingSlash' => 'ifNotFile,redirect',
                     'adminJumpToBackend' => TRUE,
                     'enableUrlDecodeCache' => TRUE,
                     'enableUrlEncodeCache' => TRUE,
-                    'emptyUrlReturnValue' => '/',
+                    #'emptyUrlReturnValue' => '/',
                 ),
-            */
                 'fileName' => array(
                     //'defaultToHTMLsuffixOnPrev' => 0,
                     //'acceptHTMLsuffix' => 0,
@@ -108,17 +106,29 @@ class RealUrlAutoConfiguration {
                     'newsDetailConfiguration' => array(
                         array(
                             'GETvar' => 'tx_news_pi1[action]',
-                            'valueMap' => array(
-                                'detail' => '',
-                            ),
-                            'noMatch' => 'bypass'
+                            #'valueMap' => array(
+                               # 'detail' => '',
+                             #),
+                             #'noMatch' => 'bypass'
                         ),
                         array(
                             'GETvar' => 'tx_news_pi1[controller]',
-                            'valueMap' => array(
-                                'News' => '',
-                            ),
-                            'noMatch' => 'bypass'
+                            #'valueMap' => array(
+                               # 'News' => '',
+                            #),
+                            #'noMatch' => 'bypass'
+                        ),
+                        array(
+                            'GETvar' => 'tx_news_pi1[day]',
+                            #'noMatch' => 'bypass',
+                        ),
+                        array(
+                            'GETvar' => 'tx_news_pi1[month]',
+                            #'noMatch' => 'bypass',
+                        ),
+                        array(
+                            'GETvar' => 'tx_news_pi1[year]',
+                            #'noMatch' => 'bypass',
                         ),
                         array(
                             'GETvar' => 'tx_news_pi1[news]',
@@ -137,18 +147,6 @@ class RealUrlAutoConfiguration {
                                 'languageField' => 'sys_language_uid',
                                 'transOrigPointerField' => 'l10n_parent',
                                 'expireDays' => 180,
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[day]',
-                                'noMatch' => 'bypass',
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[month]',
-                                'noMatch' => 'bypass',
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[year]',
-                                'noMatch' => 'bypass',
                             )
                         )
                     ),
@@ -184,22 +182,31 @@ class RealUrlAutoConfiguration {
                             )
                         )
                     ),
+                    '1' => 'newsDetailConfiguration',
+                    '2' => 'newsDetailConfiguration',
                     '6' => 'newsDetailConfiguration',
+                    '7' => 'newsDetailConfiguration',
                     '827' => 'newsTagConfiguration',
                     '828' => 'newsCategoryConfiguration',
                 ),
                 'postVarSets' => array(
                     '_DEFAULT' => array(
-                        'controller' => array(
-                            array(
-                                'GETvar' => 'tx_news_pi1[action]',
-                                'noMatch' => 'bypass'
-                            ),
-                            array(
-                                'GETvar' => 'tx_news_pi1[controller]',
-                                'noMatch' => 'bypass'
-                            )
-                        ),
+                        #'controller' => array(
+                            #array(
+                             #   'GETvar' => 'tx_news_pi1[action]',
+                                #'valueMap' => array(
+                                #    'detail' => '',
+                                #),
+                              #  'noMatch' => 'bypass'
+                            #),
+                            #array(
+                              #  'GETvar' => 'tx_news_pi1[controller]',
+                                #'valueMap' => array(
+                                #    'News' => '',
+                                #),
+                             #   'noMatch' => 'bypass'
+                            #),
+                        #),
                         'dateFilter' => array(
                             array(
                                 'GETvar' => 'tx_news_pi1[overwriteDemand][year]',
