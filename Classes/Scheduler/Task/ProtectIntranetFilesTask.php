@@ -27,7 +27,7 @@ class ProtectIntranetFilesTask extends Typo3AbstractTask
      */
     public function execute()
     {
-        $sqlQuery = 'update sys_file_metadata,sys_file set sys_file_metadata.fe_groups=-2  where sys_file.uid = sys_file_metadata.file and sys_file.identifier like \'%Intranet%\'';
+        $sqlQuery = 'update sys_file_metadata,sys_file set sys_file_metadata.fe_groups=18  where sys_file.uid = sys_file_metadata.file and sys_file.identifier like \'%Intranet%\'';
         $affectedRows = DatabaseUtility::exec($sqlQuery);
         ConsoleUtility::writeLine('Executed Task: protected Intranet Files: '.$affectedRows);
         return true;

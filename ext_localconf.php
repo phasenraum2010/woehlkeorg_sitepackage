@@ -40,4 +40,12 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']
     'description' => 'Abstand von Akkordeon Teilen einrichten'
 );
 
+#/** @var \TYPO3\CMS\Extbase\SignalSlot\Dispatcher $signalSlotDispatcher */
+#$signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher');
+#$signalSlotDispatcher->connect(
+#        'BeechIt\FalSecuredownload\Hooks\FileDumpHook',
+#        'BeforeFileDump',
+#        'Vendor\ExtensionName\Slot\BeforeFileDumpSlot',
+#        'logFileDump'
+#);
 

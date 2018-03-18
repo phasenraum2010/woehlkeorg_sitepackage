@@ -29,6 +29,12 @@ page {
 		t3sfontawesome5link.if.value = {$bootstrap.config.fontawesomeversion}
 		t3sfontawesome5link.if.equals = 5
 
+		slideNavbar = EXT:t3sbootstrap/Resources/Public/Styles/slideNavbar.css
+
+		megaMenu = EXT:t3sbootstrap/Resources/Public/Styles/megaMenu.css
+
+		mmenu = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/mmenu/jquery.mmenu.all.css
+
 		cssFileMyOwn = EXT:woehlkeorg_sitepackage/Resources/Public/Styles/my.css
 	}
 	includeJSLibs {
@@ -42,15 +48,14 @@ page {
 		jsTwitterWidget.external = 1
 	}
 
-
 	includeJSFooterlibs {
 		jquery >
 		t3sbjquery >
 		t3sbpopper >
 		t3sbootstrap >
 		tx_weather2jQuery >
+		youtubevideo >
 		tx_weather2jQuery.external = 0
-
 		#jquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
 		#jquery.external = 1
 		#t3sbjquery = https://code.jquery.com/jquery-3.2.1.slim.min.js
@@ -60,17 +65,45 @@ page {
 		#t3sbootstrap = https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
 		#t3sbootstrap.external = 1
 	}
+
 	includeJSFooter {
 		jquery >
+		#jqueryeasing >
 		t3sbjquery >
 		t3sbpopper >
 		t3sbootstrap >
-		tw01Jquery = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Jquery/jquery-3.3.1.min.js
-		tw01Jquery.forceOnTop = 1
-		tw02Ppopper = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Popper/1.12.9/umd/popper.min.js
-		tw03Bootstrap = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Bootstrap/4.0.0/dist/js/bootstrap.min.js
-		tw99JavaSrcipt = EXT:woehlkeorg_sitepackage/Resources/Public/JavaScript/my.js
+		youtubevideo >
+		tw010Jquery = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Jquery/jquery-3.3.1.slim.min.js
+		tw010Jquery.forceOnTop = 1
+		#tw020jqueryeasing =
+		tw030Ppopper = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Popper/1.12.9/umd/popper.min.js
+		tw040Bootstrap = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/Bootstrap/4.0.0/bootstrap.min.js
+		tw045mmenu = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/mmenu/jquery.mmenu.all.js
+		tw046mmenubs = EXT:woehlkeorg_sitepackage/Resources/Public/Contrib/mmenu/jquery.mmenu.bootstrap4.js
+		tw050slideNavbar = EXT:t3sbootstrap/Resources/Public/Scripts/slideNavbar.js
+		tw200youtubevideo = EXT:youtubevideo/Resources/Public/JavaScript/youtubevideo.js
+		tw999JavaSrcipt = EXT:woehlkeorg_sitepackage/Resources/Public/JavaScript/my.js
 	}
+
+	jsFooterInline.10 = TEXT
+	jsFooterInline.10.value (
+	$(document).ready(function() {
+		$(".navbar-collapse").mmenu({
+			"wrappers": ["bootstrap4"],
+			"slidingSubmenus": true,
+			"extensions": [
+				"fx-panels-zoom",
+				"pagedim-black",
+				"theme-dark"
+			],
+			backButton: {
+				close: 	true
+			},
+			"counters": true
+		});
+	});
+	)
+
 	10 {
 		layoutRootPaths {
 			310 = {$plugin.tx_woehlkeorg_sitepackage.view.layoutRootPath}

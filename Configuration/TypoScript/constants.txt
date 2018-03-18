@@ -10,6 +10,12 @@ bootstrap {
 		lastModifiedContentElement = 1
 		rootline = 1
 		fontawesomeversion = 5
+		absRefPrefix = 1
+		pageTitle {
+			suffix = Thomas Wöhlke
+		}
+		slideLeftAside = 1
+		slideRightAside = 1
 	}
 	ext {
 		form {
@@ -75,8 +81,8 @@ plugin {
 		settings {
 			# cat=plugin.tx_woehlkeorg_sitepackage/linke; type=string; label=Host (URL of local,test,live)
 			host = {$plugin.tx_woehlkeorg_sitepackage.url.test}
-			# cat=plugin.tx_woehlkeorg_sitepackage/jquery; type=string; label=jQuery Source (URL or File)
-			jQuerySource = {$plugin.tx_woehlkeorg_sitepackage.jquery.source}
+			## cat=plugin.tx_woehlkeorg_sitepackage/jquery; type=string; label=jQuery Source (URL or File)
+			#jQuerySource = {$plugin.tx_woehlkeorg_sitepackage.jquery.source}
 		}
 	}
 	tx_indexedsearch {
@@ -127,12 +133,9 @@ plugin {
 			geoPlacename = Berlin
 			robotsOdp = 0
 			enableIfHeaderIsDisabled = 1
-			googleAnalytics = UA-17174370-1
 			googleAnalytics {
 				anonymizeIp = 1
 			}
-			msnVerification = 52F1EDC0244BCDCF5C95E402E9E3E49B
-			yahooVerification = 52F1EDC0244BCDCF5C95E402E9E3E49B
 			canonicalUrl {
 				fallbackProtocol = https
 			}
@@ -164,7 +167,6 @@ plugin {
 			changeFrequency = 3
 			allowNoCache = 1
 			robotsOdp = 1
-			googleVerification = uSsWj9B9sArLE3qQu0g0YoDDvnPz74db_tPfOj4XEOg
 		}
 	}
 	tx_calendarize {
@@ -208,7 +210,26 @@ plugin {
 			pdfDestination = inline
 		}
 	}
+	t3sbootstrap_configuration {
+		upgrade = TRUE
+		navigation {
+			navbar-right {
+				uidList=56,55,54,114,53,502
+			}
+		}
+	}
+	tx_socialstream {
+		persistence {
+			storagePid = 898
+		}
+	}
+	tx_eepcollect_pi1 {
+		pid_list = 0
+		pidOfListPageCollect = 0
+		pidOfExcludedPages = 0
+	}
 }
+
 
 
 
